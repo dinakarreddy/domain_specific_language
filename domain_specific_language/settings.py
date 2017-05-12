@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'broker_to_customer',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -204,3 +205,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+RABBITMQ_URI = 'amqp://guest:guest@10.1.6.46:5672/%2F?socket_timeout:10'

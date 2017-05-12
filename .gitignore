@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.DS_Store
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+*.rst
+
+#Node.js
+google_places_data/static/google_places_data/css/style.css
+google_places_data/static/google_places_data/vendor/*
+!richmarker.js
+js/
+google_places_data/templates/google_places_data/index.html
+node_modules/
+*._*
+
+#Local settings
+analytics/settings_local.py
+logs/
+
+#Swap file
+*.swp
+
+#Price Trends
+!price_trends/HousingPRT/js
+
+#Developer Report
+!developer_report/static/js
+celerybeat-schedule
+
+#autoenv
+.env
+
+#trained price estimation models & data set
+price_estimation/tmp/
+
