@@ -76,10 +76,114 @@ WSGI_APPLICATION = 'domain_specific_language.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'mydb',
+        'USER': 'mydb',
+        'PASSWORD': 'mydb',
+        'HOST': '10.1.6.46',
+        'PORT': '5432',
+        'CONN_MAX_AGE': 300,
+        'OPTIONS': {
+            'options': '-c search_path=public,postgis'
+        }
+    },
+    # 'default': {
+    #     'ENGINE': 'django.contrib.gis.db.backends.postgis',
+    #     'NAME': 'housing_analytics',
+    #     'USER': 'dsl_readonly',
+    #     'PASSWORD': 'dsl',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5434',
+    #     'OPTIONS': {
+    #         'options': '-c search_path=public,postgis'
+    #     }
+    # },
+    'housing_analytics': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_analytics',
+        'USER': 'dsl_readonly',
+        'PASSWORD': 'dsl',
+        'HOST': '127.0.0.1',
+        'PORT': '5434',
+        'OPTIONS': {
+            'options': '-c search_path=public,postgis'
+        }
+    },
+    'housing_regions_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_regions_production',
+        'USER': 'housing_su',
+        'PASSWORD': 'housing',
+        'HOST': 'manishu.housing.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'options': '-c search_path=public,postgis'
+        }
+    },
+    'housing_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_production',
+        'USER': 'housing',
+        'PASSWORD': 'housing',
+        'HOST': 'manishu.housing.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'options': '-c search_path=public,postgis'
+        }
+    },
+    'housing_pg_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_pg_production',
+        'USER': 'housing',
+        'PASSWORD': 'housing',
+        'HOST': '127.0.0.1',
+        'PORT': '5433'
+    },
+    'housing_np_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_np_production',
+        'USER': 'housing_su',
+        'PASSWORD': 'housing',
+        'HOST': 'manishu.housing.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'options': '-c search_path=public,postgis'
+        }
+    },
+    'housing_subscription_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_subscription_production',
+        'USER': 'housing',
+        'PASSWORD': 'housing',
+        'HOST': '127.0.0.1',
+        'PORT': '5433'
+    },
+    'email_service_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'email_service_production',
+        'USER': 'housing',
+        'PASSWORD': 'housing',
+        'HOST': '127.0.0.1',
+        'PORT': '5433'
+    },
+    'housing_clients_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_clients_production',
+        'USER': 'housing_su',
+        'PASSWORD': 'housing',
+        'HOST': 'manishu.housing.com',
+        'PORT': '5432'
+    },
+    'housing_leads_production': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'housing_leads_production',
+        'USER': 'housing_su',
+        'PASSWORD': 'housing',
+        'HOST': 'manishu.housing.com',
+        'PORT': '5432'
     }
 }
+
 
 
 # Internationalization
